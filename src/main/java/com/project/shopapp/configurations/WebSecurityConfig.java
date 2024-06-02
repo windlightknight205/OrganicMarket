@@ -112,6 +112,14 @@ public class WebSecurityConfig {
                             .requestMatchers(GET,
                                     String.format("%s/healthcheck/**", apiPrefix)).permitAll()
 
+                            .requestMatchers(GET,
+                                    String.format("%s/coupons/calculate**", apiPrefix)).permitAll()
+
+                            .requestMatchers(POST,
+                                    String.format("%s/coupons/**", apiPrefix)).hasAnyRole(Role.ADMIN)
+
+                            .requestMatchers(DELETE,
+                                    String.format("%s/coupons/**", apiPrefix)).hasAnyRole(Role.ADMIN)
 
                             .anyRequest().authenticated();
                             //.anyRequest().permitAll();

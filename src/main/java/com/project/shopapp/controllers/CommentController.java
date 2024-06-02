@@ -1,5 +1,5 @@
 package com.project.shopapp.controllers;
-import com.project.shopapp.dtos.CommentDTO;
+import com.project.shopapp.dtos.product.CommentDTO;
 import com.project.shopapp.models.User;
 import com.project.shopapp.responses.ResponseObject;
 import com.project.shopapp.responses.comment.CommentResponse;

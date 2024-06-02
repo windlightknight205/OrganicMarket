@@ -1,5 +1,8 @@
 package com.project.shopapp.controllers;
 
+import com.project.shopapp.dtos.user.UpdateUserDTO;
+import com.project.shopapp.dtos.user.UserDTO;
+import com.project.shopapp.dtos.user.UserLoginDTO;
 import com.project.shopapp.exceptions.DataNotFoundException;
 import com.project.shopapp.exceptions.InvalidPasswordException;
 import com.project.shopapp.models.User;
@@ -22,7 +25,6 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
-import com.project.shopapp.dtos.*;
 
 import java.util.List;
 import java.util.UUID;
@@ -65,7 +67,6 @@ public class UserController {
                 .build());
     }
     @PostMapping("/register")
-    //can we register an "admin" user ?
     public ResponseEntity<RegisterResponse> createUser(
             @Valid @RequestBody UserDTO userDTO,
             BindingResult result

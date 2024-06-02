@@ -1,6 +1,6 @@
 package com.project.shopapp.services.category;
 
-import com.project.shopapp.dtos.CategoryDTO;
+import com.project.shopapp.dtos.category.CategoryDTO;
 import com.project.shopapp.models.Category;
 import com.project.shopapp.repositories.CategoryRepository;
 import lombok.RequiredArgsConstructor;

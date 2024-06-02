@@ -1,7 +1,7 @@
 package com.project.shopapp.controllers;
 
 import com.project.shopapp.components.LocalizationUtils;
-import com.project.shopapp.dtos.*;
+import com.project.shopapp.dtos.category.CategoryDTO;
 import com.project.shopapp.models.Category;
 import com.project.shopapp.responses.category.CategoryResponse;
 import com.project.shopapp.responses.category.UpdateCategoryResponse;

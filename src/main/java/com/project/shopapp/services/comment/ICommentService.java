@@ -1,6 +1,6 @@
 package com.project.shopapp.services.comment;
 
-import com.project.shopapp.dtos.CommentDTO;
+import com.project.shopapp.dtos.product.CommentDTO;
 import com.project.shopapp.exceptions.DataNotFoundException;
 import com.project.shopapp.models.Comment;
 import com.project.shopapp.responses.comment.CommentResponse;

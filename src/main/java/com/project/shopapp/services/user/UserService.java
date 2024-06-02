@@ -2,8 +2,8 @@ package com.project.shopapp.services.user;
 
 import com.project.shopapp.components.JwtTokenUtils;
 import com.project.shopapp.components.LocalizationUtils;
-import com.project.shopapp.dtos.UpdateUserDTO;
-import com.project.shopapp.dtos.UserDTO;
+import com.project.shopapp.dtos.user.UpdateUserDTO;
+import com.project.shopapp.dtos.user.UserDTO;
 import com.project.shopapp.exceptions.DataNotFoundException;
 
 import com.project.shopapp.exceptions.InvalidPasswordException;
@@ -23,7 +23,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor

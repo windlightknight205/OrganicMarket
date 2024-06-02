@@ -1,7 +1,7 @@
 package com.project.shopapp.services.user;
 
-import com.project.shopapp.dtos.UpdateUserDTO;
-import com.project.shopapp.dtos.UserDTO;
+import com.project.shopapp.dtos.user.UpdateUserDTO;
+import com.project.shopapp.dtos.user.UserDTO;
 import com.project.shopapp.exceptions.DataNotFoundException;
 import com.project.shopapp.exceptions.InvalidPasswordException;
 import com.project.shopapp.models.User;

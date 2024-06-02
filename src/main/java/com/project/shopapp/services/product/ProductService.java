@@ -1,7 +1,7 @@
 package com.project.shopapp.services.product;
 
-import com.project.shopapp.dtos.ProductDTO;
-import com.project.shopapp.dtos.ProductImageDTO;
+import com.project.shopapp.dtos.product.ProductDTO;
+import com.project.shopapp.dtos.product.ProductImageDTO;
 import com.project.shopapp.exceptions.DataNotFoundException;
 import com.project.shopapp.exceptions.InvalidParamException;
 import com.project.shopapp.models.Category;

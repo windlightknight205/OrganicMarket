@@ -2,7 +2,8 @@ package com.project.shopapp.controllers;
 
 import com.github.javafaker.Faker;
 import com.project.shopapp.components.LocalizationUtils;
-import com.project.shopapp.dtos.*;
+import com.project.shopapp.dtos.product.ProductDTO;
+import com.project.shopapp.dtos.product.ProductImageDTO;
 import com.project.shopapp.models.Favourite;
 import com.project.shopapp.models.Product;
 import com.project.shopapp.models.ProductImage;

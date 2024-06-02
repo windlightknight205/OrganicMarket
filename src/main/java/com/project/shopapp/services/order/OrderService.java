@@ -1,9 +1,9 @@
 package com.project.shopapp.services.order;
 
-import com.project.shopapp.dtos.CartItemDTO;
-import com.project.shopapp.dtos.OrderDTO;
-import com.project.shopapp.dtos.OrderDetailDTO;
-import com.project.shopapp.dtos.OrderWithDetailsDTO;
+import com.project.shopapp.dtos.order.CartItemDTO;
+import com.project.shopapp.dtos.order.OrderDTO;
+import com.project.shopapp.dtos.order.OrderDetailDTO;
+import com.project.shopapp.dtos.order.OrderWithDetailsDTO;
 import com.project.shopapp.exceptions.DataNotFoundException;
 import com.project.shopapp.models.*;
 import com.project.shopapp.repositories.OrderDetailRepository;

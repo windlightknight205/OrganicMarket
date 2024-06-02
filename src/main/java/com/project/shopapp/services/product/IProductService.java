@@ -1,6 +1,6 @@
 package com.project.shopapp.services.product;
-import com.project.shopapp.dtos.ProductDTO;
-import com.project.shopapp.dtos.ProductImageDTO;
+import com.project.shopapp.dtos.product.ProductDTO;
+import com.project.shopapp.dtos.product.ProductImageDTO;
 import com.project.shopapp.responses.product.ProductResponse;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

@@ -1,7 +1,7 @@
 package com.project.shopapp.controllers;
 
 import com.project.shopapp.components.LocalizationUtils;
-import com.project.shopapp.dtos.*;
+import com.project.shopapp.dtos.order.OrderDTO;
 import com.project.shopapp.models.Order;
 import com.project.shopapp.responses.order.OrderListResponse;
 import com.project.shopapp.responses.order.OrderResponse;
