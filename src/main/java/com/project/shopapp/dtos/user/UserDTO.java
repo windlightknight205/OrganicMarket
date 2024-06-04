@@ -32,6 +32,9 @@ public class UserDTO {
     @JsonProperty("date_of_birth")
     private Date dateOfBirth;
 
+    @JsonProperty("email")
+    private String email;
+
     @JsonProperty("facebook_account_id")
     private int facebookAccountId;
 

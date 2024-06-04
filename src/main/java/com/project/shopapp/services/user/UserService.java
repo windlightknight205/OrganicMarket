@@ -58,6 +58,7 @@ public class UserService implements IUserService{
                 .dateOfBirth(userDTO.getDateOfBirth())
                 .facebookAccountId(userDTO.getFacebookAccountId())
                 .googleAccountId(userDTO.getGoogleAccountId())
+                .email(userDTO.getEmail())
                 .active(true)
                 .build();
 
@@ -127,6 +128,9 @@ public class UserService implements IUserService{
         }
         if (newPhoneNumber != null) {
             existingUser.setPhoneNumber(newPhoneNumber);
+        }
+        if (updatedUserDTO.getEmail() != null) {
+            existingUser.setEmail(updatedUserDTO.getEmail());
         }
         if (updatedUserDTO.getAddress() != null) {
             existingUser.setAddress(updatedUserDTO.getAddress());

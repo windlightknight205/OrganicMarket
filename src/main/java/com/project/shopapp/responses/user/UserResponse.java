@@ -35,6 +35,9 @@ public class UserResponse {
     @JsonProperty("google_account_id")
     private int googleAccountId;
 
+    @JsonProperty("email")
+    private String email;
+
     @JsonProperty("role")
     private com.project.shopapp.models.Role role;
     public static UserResponse fromUser(com.project.shopapp.models.User user) {
@@ -47,6 +50,7 @@ public class UserResponse {
                 .dateOfBirth(user.getDateOfBirth())
                 .facebookAccountId(user.getFacebookAccountId())
                 .googleAccountId(user.getGoogleAccountId())
+                .email(user.getEmail())
                 .role(user.getRole())
                 .build();
     }
