@@ -121,6 +121,12 @@ public class WebSecurityConfig {
                             .requestMatchers(DELETE,
                                     String.format("%s/coupons/**", apiPrefix)).hasAnyRole(Role.ADMIN)
 
+                            .requestMatchers(GET,
+                                    String.format("%s/vnpay-payment", apiPrefix)).hasAnyRole(Role.USER)
+
+                            .requestMatchers(POST,
+                                    String.format("%s/vnpay", apiPrefix)).hasAnyRole(Role.USER)
+
                             .anyRequest().authenticated();
                             //.anyRequest().permitAll();
 
