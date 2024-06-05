@@ -127,6 +127,9 @@ public class WebSecurityConfig {
                             .requestMatchers(POST,
                                     String.format("%s/vnpay", apiPrefix)).hasAnyRole(Role.USER)
 
+                            .requestMatchers(POST,
+                                    String.format("%s/send", apiPrefix)).hasAnyRole(Role.ADMIN)
+
                             .anyRequest().authenticated();
                             //.anyRequest().permitAll();
 

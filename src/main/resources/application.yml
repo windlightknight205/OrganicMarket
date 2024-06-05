@@ -1,5 +1,5 @@
 server:
-  port: 8088  
+  port: 8088
 spring:
   datasource:
     url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/ShopApp?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true}
@@ -22,6 +22,17 @@ spring:
     basename: i18n/messages
     encoding: UTF-8
     default-locale: en
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: windlightknight205@gmail.com
+    password: tgnk vylq ccho czju
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
 api:
   prefix: api/v1
 jwt:
