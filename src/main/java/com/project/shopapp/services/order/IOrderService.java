@@ -1,6 +1,8 @@
 package com.project.shopapp.services.order;
 
 import com.project.shopapp.dtos.order.OrderDTO;
+import com.project.shopapp.dtos.order.RevenueDTO;
+import com.project.shopapp.dtos.order.RevenueDayDTO;
 import com.project.shopapp.exceptions.DataNotFoundException;
 import com.project.shopapp.models.Order;
 import org.springframework.data.domain.Page;
@@ -15,4 +17,6 @@ public interface IOrderService {
     void deleteOrder(Long id);
     List<Order> findByUserId(Long userId);
     Page<Order> getOrdersByKeyword(String keyword, Pageable pageable);
+    List<RevenueDTO> getMonthlyRevenue(int year);
+    List<RevenueDayDTO> getDailyRevenueByMonth(int month, int year);
 }

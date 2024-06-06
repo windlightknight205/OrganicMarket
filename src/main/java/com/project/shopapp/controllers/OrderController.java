@@ -2,14 +2,13 @@ package com.project.shopapp.controllers;
 
 import com.project.shopapp.components.LocalizationUtils;
 import com.project.shopapp.dtos.order.OrderDTO;
+import com.project.shopapp.dtos.order.RevenueDTO;
+import com.project.shopapp.dtos.order.RevenueDayDTO;
 import com.project.shopapp.models.Order;
 import com.project.shopapp.responses.order.OrderListResponse;
 import com.project.shopapp.responses.order.OrderResponse;
 import com.project.shopapp.services.order.IOrderService;
-import com.project.shopapp.services.vnpay.VNPayService;
 import com.project.shopapp.utils.MessageKeys;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -18,7 +17,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
@@ -123,5 +121,15 @@ public class OrderController {
                 .orders(orderResponses)
                 .totalPages(totalPages)
                 .build());
+    }
+    //Lay thong ke doanh thu theo thang
+    @GetMapping("/revenue/{year}")
+    public ResponseEntity<List<RevenueDTO>> getMonthlyRevenue(@PathVariable int year){
+        return ResponseEntity.ok(orderService.getMonthlyRevenue(year));
+    }
+
+    @GetMapping("/revenue-daily/{month}/{year}")
+    public ResponseEntity<List<RevenueDayDTO>> getDailyRevenue(@PathVariable int month, @PathVariable int year){
+        return ResponseEntity.ok(orderService.getDailyRevenueByMonth(month,year));
     }
 }

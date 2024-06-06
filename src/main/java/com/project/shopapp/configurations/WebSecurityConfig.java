@@ -130,6 +130,12 @@ public class WebSecurityConfig {
                             .requestMatchers(POST,
                                     String.format("%s/send", apiPrefix)).hasAnyRole(Role.ADMIN)
 
+                            .requestMatchers(GET,
+                                    String.format("%s/revenue", apiPrefix)).hasAnyRole(Role.ADMIN)
+
+                            .requestMatchers(GET,
+                                    String.format("%s/revenue-daily", apiPrefix)).hasAnyRole(Role.ADMIN)
+
                             .anyRequest().authenticated();
                             //.anyRequest().permitAll();
 
